@@ -21,7 +21,7 @@ ok(3);
 use File::MergeSort;
 ok(4);
 
-my @files = ('test/file1.txt', 'test/file2.txt', 'test/file4.txt', 'test/file3.txt.gz', 'test/file5.txt.gz'); #  
+my @files = ('file1.txt', 'file2.txt', 'file4.txt', 'file3.txt.gz', 'file5.txt.gz'); #  
 
 my $sort = new File::MergeSort( 
 	\@files, 

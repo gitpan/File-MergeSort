@@ -260,7 +260,7 @@ __END__
 
 =head1 NAME
 
-File::MergeSort - Performings a merge sort on ordered data files.
+File::MergeSort - Performs a mergesort on ordered data files.
 
 =head1 SYNOPSIS
 
