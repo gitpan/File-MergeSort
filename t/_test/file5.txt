@@ -1,8 +1,0 @@
-file5	1
-file5	1
-file5	1
-file5	3
-file5	3
-file5	6
-file5	6
-file5	7

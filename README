@@ -1,10 +1,18 @@
-File/MergeSort version 1.09
+File/MergeSort version 1.10
 ===========================
 
 POINTS TO NOTE
 
 As of version 1.06, sorts are now performed lexicographically, so
 File::MergeSort can now merge files with non-numeric merge keys.
+
+As of version 1.10 (this version) IO::Zlib is no longer a prerequisite.
+If IO::Zlib is installed, File::MergeSort will use it to handle
+compressed input files.
+If IO::Zlib is not installed and compressed files are specified as
+input files, File::MergeSort will raise an exception.
+If you do not need to process compressed files, there is no longer any
+need install IO::Zlib to use File::MergeSort.
 
 INSTALLATION
 
@@ -20,7 +28,6 @@ DEPENDENCIES
 This module requires these other modules and libraries:
 
   IO::File
-  IO::Zlib
   Test::More (for running tests during 'make test')
 
 COPYRIGHT AND LICENCE
@@ -28,5 +35,6 @@ COPYRIGHT AND LICENCE
 Chris Brown, <chris.brown@cal.berkeley.edu>
 
 Copyright(c) 2003 Christopher Brown.  All rights reserved.  
-This program is free software; you can redistribute it and/or modify it under 
-the terms of the License, distributed with Perl.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the License, distributed with Perl.

@@ -4,8 +4,7 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile('NAME'         => 'File::MergeSort',
 	      'VERSION_FROM' => 'MergeSort.pm', # finds $VERSION
-	      'PREREQ_PM'    => { 'IO::Zlib'   => '0', # or a minimum workable version
-				  'IO::File'   => '0',
+	      'PREREQ_PM'    => { 'IO::File'   => '0',
 				  'Test::More' => '0',
 				},
 	      ($] >= 5.005 ?    ## Add these new keywords supported since 5.005

@@ -1,5 +1,17 @@
 Revision history for Perl extension File::MergeSort.
 
+1.10  Sun Feb 29 01:45:00 2004
+     - Small internal cleanups.
+     - IO::Zlib is now optional, rather than a prerequisite.
+       Compressed files are handled if IO::Zlib is installed. If you
+       don't deal with compressed files, there is no longer any need
+       to install IO::Zlib.
+     - If compressed files are specified as input files and IO::Zlib
+       is not installed an exception is raised.
+     - Errors extracting merge key or opening files now cause an
+       exception, rather than a warning.
+     - Test suite fixed.
+
 1.09  Sun Oct 19 15:03:00 2003
      - Commented out broken tests until they can be fixed.
      - Added Test::More as a prerequisite
@@ -14,25 +26,25 @@ Revision history for Perl extension File::MergeSort.
  
 1.06  Sun May 25 17:02:00 2003
      - Perform comparisons lexicographically, rather than numerically
-	- Corrected minimum required version of Perl: 5.006 not 5.008.
-        - Doc and code cleanups
-	- More tests
+     - Corrected minimum required version of Perl: 5.006 not 5.008.
+     - Doc and code cleanups
+     - More tests
 
 1.05  Sat Mar 15 13:06:20 2003
-	- Improved tests
+     - Improved tests
 
 1.01  Tue Feb 25 06:15:30 2003
-	- Improved documentation and tests
+     - Improved documentation and tests
 
-1.0	  Thu Sept 12 15:28:20 2002
-	- changed name to more properly characterize algorithm.
+1.0   Thu Sept 12 15:28:20 2002
+     - changed name to more properly characterize algorithm.
 
 0.75  Sat Oct 26 2:33:20 2001
-	+ now handles compressed files
+        + now handles compressed files
 
 0.50  Fri Oct 26 18:42:20 2001
-	- almost ready for prime-time.
+        - almost ready for prime-time.
 
 0.01  Sun Oct 21 14:30:16 2001
-	- original version; created by h2xs 1.21 with options
-		-Xn File::MergeSort
+        - original version; created by h2xs 1.21 with options
+        -Xn File::MergeSort
