@@ -24,7 +24,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 
 
@@ -256,7 +256,7 @@ __END__
 
 =head1 NAME
 
-File::MergeSort - Performings a merge sort on ordered data files.
+File::MergeSort - Merge sort ordered data files.
 
 =head1 SYNOPSIS
 
