@@ -1,5 +1,11 @@
 Revision history for Perl extension File::MergeSort.
 
+1.09  Sun Oct 19 15:03:00 2003
+     - Commented out broken tests until they can be fixed.
+     - Added Test::More as a prerequisite
+     - Cleaned up stray Ctrl-M characters in files.
+     - Tidied Authors and Copyright sections of documentation.
+
 1.08  Thu Jul 17 13:57:00 2003
      - Updated Documentation
      

@@ -1,14 +1,10 @@
-File/MergeSort version 1.06
+File/MergeSort version 1.09
 ===========================
 
-CHANGES SINCE PREVIOUS VERSION
+POINTS TO NOTE
 
-Sorts are now performed lexicographically, so File::MergeSort can now
-merge files with non-numeric merge keys.
-
-Reduced minimum perl version from 5.008 (5.8.0) to 5.006 (5.6.0).
-
-Documentation and code cleanups, plus a few more tests.
+As of version 1.06, sorts are now performed lexicographically, so
+File::MergeSort can now merge files with non-numeric merge keys.
 
 INSTALLATION
 
@@ -25,6 +21,7 @@ This module requires these other modules and libraries:
 
   IO::File
   IO::Zlib
+  Test::More (for running tests during 'make test')
 
 COPYRIGHT AND LICENCE
 

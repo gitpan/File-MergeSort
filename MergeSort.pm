@@ -1,6 +1,6 @@
 package File::MergeSort;
 
-our $VERSION = '1.08';
+our $VERSION = '1.09';
 
 use 5.006;     # 5.6.0
 use strict;
@@ -87,7 +87,7 @@ sub new {
     foreach my $file(@{$files_ref}) {
 
 	if ( my $fh = _open_file($file) ) {
-	
+
 	    $self->{files}->[$n]->{fh} = $fh;               # Store object.
 	    $self->{num_files} = $self->{num_files} + 1;    # Increase Count of open files
 
@@ -207,7 +207,7 @@ File::MergeSort - Mergesort ordered files.
  use File::MergeSort;
 
  # Create the MergeSort object.
- my $sort = new File::MergeSort( 
+ my $sort = new File::MergeSort(
                 [ $file_1, ..., $file_n ],  # Anonymous array of input files
                 \&extract_function,         # Sub to extract merge key
                 );
@@ -372,23 +372,29 @@ FILENAME is not given, until all files have been exhausted.
  + Implement a generic test/comparison function to replace text/numeric comparison.
  + Implement a configurable record seperator.
  + Allow for optional deletion of duplicate entries.
+ + Improve test suite.
 
 =head1 EXPORTS
 
 Nothing. OO interface. See CONSTRUCTOR and METHODS
 
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2003 various authors.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
 =head1 AUTHORS
 
-Original Author: Christopher BrownE<lt>chris.brown@cal.berkeley.eduE<gt>
+=head2 Original Author
 
-Contrbutors: Barrie Bremmer E<lt>http://barriebremner.com/E<gt>, Laura Cooney, 
+ Christopher Brown E<lt>chris.brown@cal.berkeley.eduE<gt>
 
-=head1 COPYRIGHT
+=head2  Contributors
 
-Copyright (c) 2003.
-
-This program is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+ Barrie Bremner L<http://barriebremner.com/>
+ Laura Cooney
 
 =head1 SEE ALSO
 
