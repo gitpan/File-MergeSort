@@ -1,4 +1,5 @@
 package File::MergeSort;
+our $VERSION = '1.05'; 
 
 use 5.006;
 use strict;
@@ -24,7 +25,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
 
-our $VERSION = '1.04';
+
 
 
 

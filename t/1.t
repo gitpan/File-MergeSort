@@ -18,7 +18,7 @@ BEGIN { use_ok('IO::Zlib') };
 BEGIN { use_ok('File::MergeSort') };
 
 
-my $files = ['_test/file1.txt', '_test/file2.txt', '_test/file4.txt', '_test/file3.txt.gz', '_test/file5.txt.gz']; #  
+my $files = ['t/_test/file1.txt', 't/_test/file2.txt', 't/_test/file4.txt', 't/_test/file3.txt.gz', 't/_test/file5.txt.gz']; #  
 
 ## CREATE MS OBJECT
 my $sort = new File::MergeSort( $files, \&index );

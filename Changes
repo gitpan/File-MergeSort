@@ -15,3 +15,6 @@ Revision history for Perl extension File::MergeSort.
 
 1.01  Tue Feb 25 06:15:30 2003
 	- Improved documentation and tests
+
+1.05  Sat Mar 15 13:06:20 2003
+	- Improved tests
