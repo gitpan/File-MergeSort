@@ -1,0 +1,14 @@
+Revision history for Perl extension File::MergeSort.
+
+0.01  Sun Oct 21 14:30:16 2001
+	- original version; created by h2xs 1.21 with options
+		-Xn File::MergeSort
+
+0.50  Fri Oct 26 18:42:20 2001
+	- almost ready for prime-time.
+
+0.75  Sat Oct 26 2:33:20 2001
+	- now handles compressed files
+
+1.0	  Thu Sept 12 15:28:20 2002
+	- changed name to more properly characterize algorithm.

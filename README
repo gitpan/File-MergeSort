@@ -1,0 +1,27 @@
+File/MergeSort version 1.0
+============================
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  IO::File
+  IO::Zlib
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2002 Chris Brown, chris.brown@cal.berkeley.edu
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself or until I say otherwise.  
+Not intended for evil purposes.  Yadda, yadda, yadda ...
+
