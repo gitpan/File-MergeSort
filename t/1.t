@@ -11,7 +11,8 @@ BEGIN { use_ok('IO::File') };
 BEGIN { use_ok('IO::Zlib') };
 BEGIN { use_ok('File::MergeSort') };
 
-my $files = [ 't/_test/file1.txt',
+my $files = [
+		  't/_test/file1.txt',
 	      't/_test/file2.txt',
 	      't/_test/file3.txt.gz',
 	      't/_test/file4.txt',

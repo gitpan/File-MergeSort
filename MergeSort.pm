@@ -1,6 +1,6 @@
 package File::MergeSort;
 
-our $VERSION = '1.07';
+our $VERSION = '1.08';
 
 use 5.006;     # 5.6.0
 use strict;
@@ -377,11 +377,15 @@ FILENAME is not given, until all files have been exhausted.
 
 Nothing. OO interface. See CONSTRUCTOR and METHODS
 
-=head1 AUTHOR
+=head1 AUTHORS
 
-Chris Brown: <chris.brown@cal.berkeley.edu>
+Original Author: Christopher BrownE<lt>chris.brown@cal.berkeley.eduE<gt>
 
-Copyright(c) 2003 Christopher Brown.
+Contrbutors: Barrie Bremmer E<lt>http://barriebremner.com/E<gt>, Laura Cooney, 
+
+=head1 COPYRIGHT
+
+Copyright (c) 2003.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
