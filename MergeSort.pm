@@ -24,7 +24,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
 
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 
 
@@ -81,7 +81,7 @@ sub new {
 	my $array_ref = $self->{files};
 	
 	my %shash;
-	$n = 0;
+	$n = 0;
 	foreach my $a_ref ( @{$self->{files}} ) {
 		$shash{$n} = $a_ref->{index};
 		$n++;
