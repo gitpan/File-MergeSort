@@ -1,20 +1,26 @@
 Revision history for Perl extension File::MergeSort.
 
-0.01  Sun Oct 21 14:30:16 2001
-	- original version; created by h2xs 1.21 with options
-		-Xn File::MergeSort
+1.06  Sun May 25 17:02:00 2003
+        - Perform comparisons lexicographically, rather than numerically
+	- Corrected minimum required version of Perl: 5.006 not 5.008.
+        - Doc and code cleanups
+	- More tests
 
-0.50  Fri Oct 26 18:42:20 2001
-	- almost ready for prime-time.
-
-0.75  Sat Oct 26 2:33:20 2001
-	+ now handles compressed files
-
-1.0	  Thu Sept 12 15:28:20 2002
-	- changed name to more properly characterize algorithm.
+1.05  Sat Mar 15 13:06:20 2003
+	- Improved tests
 
 1.01  Tue Feb 25 06:15:30 2003
 	- Improved documentation and tests
 
-1.05  Sat Mar 15 13:06:20 2003
-	- Improved tests
+1.0	  Thu Sept 12 15:28:20 2002
+	- changed name to more properly characterize algorithm.
+
+0.75  Sat Oct 26 2:33:20 2001
+	+ now handles compressed files
+
+0.50  Fri Oct 26 18:42:20 2001
+	- almost ready for prime-time.
+
+0.01  Sun Oct 21 14:30:16 2001
+	- original version; created by h2xs 1.21 with options
+		-Xn File::MergeSort

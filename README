@@ -1,16 +1,14 @@
-File/MergeSort version 1.01
+File/MergeSort version 1.06
 ===========================
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+CHANGES SINCE PREVIOUS VERSION
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+Sorts are now performed lexicographically, so File::MergeSort can now
+merge files with non-numeric merge keys.
+
+Reduced minimum perl version from 5.008 (5.8.0) to 5.006 (5.6.0).
+
+Documentation and code cleanups, plus a few more tests.
 
 INSTALLATION
 
@@ -30,10 +28,8 @@ This module requires these other modules and libraries:
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
-Chris Brown, L<chris.brown@cal.berkeley.edu>
+Chris Brown, <chris.brown@cal.berkeley.edu>
 
 Copyright(c) 2003 Christopher Brown.  All rights reserved.  
 This program is free software; you can redistribute it and/or modify it under 
-the terms of the License, distributed with PERL.  
+the terms of the License, distributed with Perl.

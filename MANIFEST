@@ -4,6 +4,7 @@ MANIFEST
 MergeSort.pm
 README
 t/1.t
+t/_test/expected
 t/_test/file1.txt
 t/_test/file2.txt
 t/_test/file3.txt.gz
