@@ -1,6 +1,6 @@
 package File::MergeSort;
 
-our $VERSION = '1.10';
+our $VERSION = '1.11';
 
 use 5.006;     # 5.6.0
 use strict;

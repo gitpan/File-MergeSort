@@ -1,5 +1,10 @@
 Revision history for Perl extension File::MergeSort.
 
+1.11  Sun Feb 29 12:38:00 2004
+     - The compressed test files were not included in v1.10, causing
+       tests to fail if IO::Zlib was installed. This release fixes
+       that oversight.
+
 1.10  Sun Feb 29 01:45:00 2004
      - Small internal cleanups.
      - IO::Zlib is now optional, rather than a prerequisite.
