@@ -3,9 +3,10 @@ package File::MergeSort;
 use 5.006;
 use strict;
 use warnings;
+use Carp;
 use IO::File;
 use IO::Zlib;
-use Carp;
+
 
 require Exporter;
 #use AutoLoader qw(AUTOLOAD);
@@ -19,24 +20,19 @@ our @ISA = qw(Exporter);
 # This allows declaration	use PeopleLink::Sort ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
-our %EXPORT_TAGS = ( 'all' => [ qw(
-	
-) ] );
-
+our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
+our @EXPORT = qw();
 
-our @EXPORT = qw(
-	
-);
+our $VERSION = '1.01';
 
-our $VERSION = '1.0';
 
 
 # Preloaded methods go here.
 
 
 
-# Create a new sort object
+## CREATE NEW SORT OBJECT
 sub new {
 
 	my $type = shift;
@@ -260,34 +256,40 @@ __END__
 
 =head1 NAME
 
-File::MergeSort - Performs a mergesort on ordered data files.
+File::MergeSort - Performings a merge sort on ordered data files.
 
 =head1 SYNOPSIS
 
   use File::MergeSort;
-  
+
+
+  ## Create the MergeSort Object.  
   my $sort = new File::MergeSort( 
-                \@file_list,             # Anonymous array of path/files 
-                \&index_extract_function 
+                $file_list,             	# Anonymous array of path/files 
+                \&index_extract_function 	# Reference to a subroutine that 
   );
 
 
-  my $line = $sort->next_line;  # Retrieves the next line for porcessing
+  ## Retrieves the next line for porcessing
+  my $line = $sort->next_line;  
   print "$line\n";
 
-  $sort->dump( [file] ); 	# Dumps remaining records in sorted order
-                          # to a file.            Default: <STDOUT>
+
+  ## Dumps remaining records in sorted order to a file.    Default: <STDOUT>	
+  $sort->dump( [file] ); 	
+
 
 
 =head1 DESCRIPTION
 
 File::MergeSort provides an easy way to merge, parse, process and analyze data
 that distributed in presorted files using the well known merge sort algorith.  
-User supplies a list of pathnames and files and calls either next_line function
-or the dump function from the OO interface.
+User supplies a list of file pathnames and a function to extract an numeric index value
+from each record line.  By calling the "next_line" or "dump" function, the user 
+can retrieve the records in an ordered manner.
 
 File::MergeSort is a hopefully straight forward solution for situations where one 
-wishes to merge data files with all ready ordered records. An example might 
+wishes to merge data files with PRE-ORDERED records. An example might be
 application server logs which record events chronilogically from a cluster.  If we 
 want to examine, process or merge several files but retain the chronological order,
 then MergeSort is for you.
@@ -325,18 +327,22 @@ Additional Notes:
    # files sorted by the date  in mm/dd/yyyy
    # format
 
-  use File::Recurse;
   use File::MergeSort;
 
-  recurse { push(@files, $_) } "/logfiles";
-
-  my $fs = new File::MergeSort(\@files, \&index_sub);
 	
-  while (my $line = $fs->next_line) {
+  my $files =  [ 'logfiles/log_server_1.log' , 
+			  'logfiles/log_server_2.log' ,
+			  'logfiles/log_server_3.log' 
+			]	
+
+  my $ms = new File::MergeSort($files, \&index_sub);
+	
+  while (my $line = $ms->next_line) {
     .
 	.	some operations on $line
 	.
   }
+
 
 
   sub index_sub{
@@ -352,9 +358,9 @@ Additional Notes:
  
     return "$3$1$2";  # Index is an interger, yyyymmdd
                       # Lower number will be read first.
-
   }	
 	
+
 
 =head1 TODO
 
@@ -372,7 +378,7 @@ None by default.
 
 Chris Brown, L<chris.brown@cal.berkeley.edu>
 
-Copyright(c) 2002 Christopher Brown.  All rights reserved.  
+Copyright(c) 2003 Christopher Brown.  All rights reserved.  
 This program is free software; you can redistribute it and/or modify it under 
 the terms of the License, distributed with PERL.  Not intended for evil purposes.  
 Yadda, yadda, yadda ...
