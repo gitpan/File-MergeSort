@@ -11,7 +11,8 @@ t/3
 t/4
 t/5
 t/6
-t/basic.t
-t/compressed.t
-t/exception.t
+t/1_basic.t
+t/2_compressed.t
+t/3_exception.t
+t/4_pod_coverage.t
 META.yml                                 Module meta-data (added by MakeMaker)

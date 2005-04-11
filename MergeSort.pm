@@ -1,6 +1,6 @@
 package File::MergeSort;
 
-our $VERSION = '1.11';
+our $VERSION = '1.12';
 
 use 5.006;     # 5.6.0
 use strict;
@@ -25,7 +25,7 @@ sub _open_file {
     my $file = shift;
     my $fh;
 
-    if ( $file =~ /\.(z|gz)$/ ) {           # Files matching .z .gz or .zip
+    if ( $file =~ /\.(z|gz)$/ ) {           # Files matching .z or .gz
 
         if ( $have_io_zlib ) {
             $fh = IO::Zlib->new("$file", "rb");
@@ -251,12 +251,12 @@ Comparisons on the merge keys are carried out lexicographically. The
 user should ensure that the subroutine used to extract merge keys
 formats the keys if required so that they sort correctly.
 
-Note that earlier versions (< 1.06) of File::MergeSort preformed
+Note that earlier versions (< 1.06) of File::MergeSort performed
 numeric, not lexicographical comparisons.
 
 =head3 IO::Zlib is optional
 
-As of version 1.10 (this version) IO::Zlib is no longer a prerequisite.
+IO::Zlib is no longer a prerequisite.
 If IO::Zlib is installed, File::MergeSort will use it to handle
 compressed input files.
 
@@ -274,16 +274,17 @@ to extract an index value from each record line (the merge key).
 By calling the "next_line" or "dump" function, the user can retrieve
 the records in an ordered manner.
 
-As arguments, MergeSort takes a reference to an anonymous array of
-file paths/names and a reference to a subroutine that extracts a merge
-key from a line.
+As arguments, File::MergeSort takes a reference to an anonymous array
+of file paths/names and a reference to a subroutine that extracts a
+merge key from a line.
 
 The anonymous array of the filenames are the files to be sorted with
 the subroutine determining the sort order.
 
-For each file MergeSort opens the file using IO::File or IO::Zlib for
-compressed files.  MergeSort handles mixed compressed and uncompressed
-files seamlessly by detecting for files with .z or .gz extensions.
+For each file File::MergeSort opens the file using IO::File or
+IO::Zlib for compressed files.  File::MergeSort handles mixed
+compressed and uncompressed files seamlessly by detecting for files
+with .z or .gz extensions.
 
 When passed a line (a scalar, passed as the first and only argument,
 $_[0]) from one of the files, the user supplied subroutine must return
@@ -391,17 +392,17 @@ Returns the number of lines output.
 =head1 TODO
 
  + Implement a generic test/comparison function to replace text/numeric comparison.
- + Implement a configurable record seperator.
+ + Implement a configurable record separator.
  + Allow for optional deletion of duplicate entries.
  + Ensure input is really in correct sort order - currently upto the user.
 
 =head1 EXPORTS
 
-Nothing. OO interface. See CONSTRUCTOR and METHODS.
+Nothing: OO interface. See CONSTRUCTOR and METHODS.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2003 various authors.
+Copyright (c) 2001-2005 various authors.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -410,9 +411,9 @@ it under the same terms as Perl itself.
 
 =head2 Original Author
 
-Christopher Brown E<lt>chris.brown@cal.berkeley.eduE<gt>.
+Christopher Brown E<lt>ctbrown@cpan.orgE<gt>.
 
-=head2 Co-maintainer
+=head2 Maintainer
 
 Barrie Bremner L<http://barriebremner.com/>.
 
