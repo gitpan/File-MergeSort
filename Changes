@@ -1,5 +1,9 @@
 Revision history for Perl extension File::MergeSort.
 
+1.13  Fri Jan 27 2006
+    - Fix broken example code.
+    - Add another POD test.
+
 1.12  Mon Apr 11 2005
     - Added POD coverage tests.
     - Minor documentation fixes.

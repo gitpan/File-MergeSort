@@ -1,6 +1,6 @@
 # http://module-build.sourceforge.net/META-spec.html
 name:         File-MergeSort
-version:      1.12
+version:      1.13
 version_from: MergeSort.pm
 installdirs:  site
 license:      perl

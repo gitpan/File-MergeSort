@@ -1,4 +1,4 @@
-File/MergeSort version 1.12
+File/MergeSort version 1.13
 ===========================
 
 POINTS TO NOTE
@@ -39,7 +39,7 @@ These modules will be utilised if installed, but are not essential:
 
 COPYRIGHT AND LICENCE
 
-Copyright (c) 2003-2005 various authors.
+Copyright (c) 2003-2006 various authors.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
