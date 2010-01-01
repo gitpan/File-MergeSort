@@ -1,8 +1,8 @@
 --- #YAML:1.0
 name:                File-MergeSort
-version:             1.21
+version:             1.22
 abstract:            Mergesort ordered files.
-license:             ~
+license:             perl
 author:              
     - Barrie Bremner
 generated_by:        ExtUtils::MakeMaker version 6.42
